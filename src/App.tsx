@@ -1,4 +1,6 @@
 import React from 'react';
+import logo from './assets/logo.png';
+
 
 const features = [
   {
@@ -94,15 +96,9 @@ export default function App() {
           <div className="top-bar px-6 md:px-12 py-5 flex justify-between items-center">
             <div className="h-16 md:h-20 flex items-center animate-fade-in-left">
               <img
-                src="/assets/logo.png"
+                src={logo}
                 alt="Eben Dev Solutions Logo"
                 className="h-12 md:h-16 object-contain drop-shadow-sm mr-4"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  if (!target.src.includes('src/assets')) {
-                    target.src = '/src/assets/logo.png';
-                  }
-                }}
               />
               <h1 className="text-xl md:text-2xl font-bold text-primary tracking-tight">
                 Eben Dev Solutions
@@ -410,7 +406,7 @@ export default function App() {
                     <div className="relative">
                       <div className="absolute -inset-3 bg-gradient-to-br from-secondary/10 to-primary/5 rounded-2xl blur-lg print:hidden" aria-hidden="true" />
                       <img
-                        src="/assets/logo.png"
+                        src={logo}
                         alt="Eben Dev Solutions"
                         className="h-20 md:h-24 object-contain relative z-10 drop-shadow-sm"
                       />
